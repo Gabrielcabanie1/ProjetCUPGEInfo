@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main(int argc, char * argv[])
+{
+    printf(%d\n",argc);
+    return 0;
+}
+
+//sert a rien, c'est une erruer, pour executer l'exercice 1 executer exercice11
