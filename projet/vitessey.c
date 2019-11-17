@@ -3,7 +3,7 @@
 //#include <main.h>
 #include <ctype.h>
 
-int vitesse_y(int (*point).x,int (*point).y,int (*point).z,p)
+int vitesse_y(Coordonnees* point)
 {
     int res= (point->x) * (p * (point->z))-(point->y);
     return(res);

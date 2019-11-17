@@ -46,6 +46,13 @@ int main(int argc, char *argv[])
     int y0;
     int z0;
     
+    //demander a l'utilisateur les conditions initiales puis les mettre dans le tableau
+
+    *point.x = x0;
+    *point.y = y0;
+	*point.z = z0;
+
+    
     int sigma = 10;
     int B = 8/3;
     int p = 28;
@@ -79,9 +86,9 @@ int main(int argc, char *argv[])
     
     for (int i=1;i<=nb_periode;i++)
     {
-           point.x = point.x+((vitesse_x(point.x,point.y,sigma)) * val_periode);
-           point.y = point.y+((vitesse_y(point.x,point.y,point.z,p)) * val_periode);
-           point.z = point.z+((vitesse_z(point.x,point.y,point.z,B)) * val_periode);
+           point.x = point.x+((vitesse_x(&point)) * val_periode);
+           point.y = point.y+((vitesse_y(&point)) * val_periode);
+           point.z = point.z+((vitesse_z(&point)) * val_periode);
            tab[i]=point; //on va remplir le tableau avec les points pour stocker chaque position, on vverra ensuite coment les afficher avec la foonction demandée
     }
     return(0);
